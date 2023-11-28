@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Statistics } from "./components/Statistics"
+import { LottieFood } from './components/LottieAnimations/LottieFood'
 import './App.css'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
   return (
     <section>
       <Statistics />
+      <LottieFood />
     </section>
   )
 }

@@ -11,13 +11,13 @@ export const UserData = [
         userGain: 45677,
         userLost: 345,
       },
-      /*{
+      {
         id: 3,
         year: 2018,
         userGain: 78888,
         userLost: 555,
       },
-      {
+      /*{
         id: 4,
         year: 2019,
         userGain: 90000,

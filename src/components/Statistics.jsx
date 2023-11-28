@@ -11,11 +11,10 @@ export const Statistics = () => {
             label: "Users Gained",
             data: UserData.map((data) => data.userGain),
             backgroundColor: [
-              "rgba(75,192,192,1)",
               "#ecf0f1",
-              "#50AF95",
-              "#f3ba2f",
-              "#2a71d0",
+              "#A1F89F",
+              "#F9AEAE",
+              
             ],
             borderColor: "#ddd",
             borderWidth: 1,
