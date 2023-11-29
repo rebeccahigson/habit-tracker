@@ -1,17 +1,17 @@
 import { useState } from 'react'
-import { Statistics } from "./components/Statistics"
-import { LottieFood } from './components/LottieAnimations/LottieFood'
+import { BrowserRouter} from "react-router-dom";
+import { routes } from "./routes/Routes"
+import { Statistics } from "./pages/Statistics"
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+export const App = () => {
 
   return (
-    <section>
-      <Statistics />
-      <LottieFood />
-    </section>
+    <div>
+      {/*<BrowserRouter>
+        {routes}
+      </BrowserRouter>*/}
+  <Statistics />
+    </div>
   )
-}
-
-export default App
+};

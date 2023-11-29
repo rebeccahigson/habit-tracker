@@ -1,7 +1,12 @@
 
 import { useState } from "react";
-import { DoughnutChart } from "./DoughnutChart";
+import { DoughnutChart } from "../components/DoughnutChart";
 import { UserData } from "../UserData" ;
+import Lottie from "lottie-react";
+import { LottieConsolidated, LottieCalendarComponent, LottieCheckComponent, LottieTrophyComponent, LottieXComponent  } from "../components/LottieAnimations/LottieConsolidated";
+
+//Sum up the value of true, false and calculate how many nulls to get the chart data
+//Show day x of 30
 
 export const Statistics = () => {
     const [userData, setUserData] = useState({
@@ -14,7 +19,6 @@ export const Statistics = () => {
               "#ecf0f1",
               "#A1F89F",
               "#F9AEAE",
-              
             ],
             borderColor: "#ddd",
             borderWidth: 1,
@@ -26,7 +30,12 @@ export const Statistics = () => {
   return (
     <section>
         Statistics
+        
         <DoughnutChart  chartData={userData}/>
+        <LottieCalendarComponent />
+        <LottieCheckComponent />
+        <LottieTrophyComponent />
+        <LottieXComponent />
     </section>
   )
 }
