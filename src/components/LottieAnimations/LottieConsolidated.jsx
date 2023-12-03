@@ -70,8 +70,6 @@ const LottieTrophyComponent = () => {
     autoplay={trophyOptions.autoplay}
     />
   )
-
-  
 }
 
 
@@ -80,7 +78,7 @@ const LottieXComponent = () => {
   const xOptions = {
     animationData: lottie_X,
     style: {
-      height:300
+      height:260
     },
     loop: false, 
     autoplay:true

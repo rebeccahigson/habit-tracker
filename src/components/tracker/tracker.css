@@ -1,0 +1,62 @@
+
+
+/*-- Typography ---------------*/
+h1{
+font-size:24px;
+line-height:32px;
+}
+h2{
+font-size:20px;
+line-height:26px;
+}
+p{
+font-size:18px;
+line-height:24px;
+color:#333;
+}
+
+
+/*-- Colors ---------------*/
+.col-green{
+    background-color:#00E55C;
+}
+
+
+/*-- Layout ---------------*/
+.wrapper{
+width:100%;
+}
+.container{
+width:1000px;
+border:1px solid red;
+margin:50px 0;
+}
+
+
+/*-- Buttons ---------------*/
+button{
+    padding:15px 25px;
+    color:#fff;
+    background-color:#000;
+}
+
+
+.doughnut-chart{
+    width:400px;
+}
+
+
+/*-- Tracker ---------------*/
+.tracker{
+display:flex;
+flex-wrap: wrap;
+}
+.tracker-day{
+width:100px;
+height:55px;
+margin:2px;
+}
+figure{
+    float:left;
+    display:block;
+}

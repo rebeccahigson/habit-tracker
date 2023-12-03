@@ -1,17 +1,16 @@
-import { useState } from 'react'
-import { BrowserRouter} from "react-router-dom";
-import { routes } from "./routes/Routes"
-import { Statistics } from "./pages/Statistics"
 import './App.css'
+import './components/tracker/tracker.css';
+import { HabitIndex } from './pages/HabitIndex';
+import { Nav } from './components/nav/Nav';
 
 export const App = () => {
 
   return (
-    <div>
-      {/*<BrowserRouter>
-        {routes}
-      </BrowserRouter>*/}
-  <Statistics />
-    </div>
+    <main className='wrapper'>
+      <div className='container'>
+        <Nav />
+        <HabitIndex />
+      </div>
+    </main>
   )
 };
