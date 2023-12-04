@@ -2,8 +2,7 @@
 import { useState } from "react";
 import { DoughnutChart } from "../components/charts/DoughnutChart";
 import { UserData } from "../UserData" ;
-import Lottie from "lottie-react";
-import { LottieCalendarComponent, LottieCheckComponent, LottieTrophyComponent, LottieXComponent } from "../components/LottieAnimations/LottieConsolidated";
+import { Link } from "react-router-dom";
 
 //Sum up the value of true, false and calculate how many nulls to get the chart data
 //Show day x of 30
@@ -24,19 +23,52 @@ export const StatisticsContainer = () => {
             borderWidth: 1,
           },
         ],
-})
+    })
 
 
   return (
-    <section>
-        Statistics
+    <article>
+      <section>
+        <h2>Habit 1</h2>
+        <p>x days of 30 completed</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <Link to="/habits">
+          <button className="mainBtn">Habit 1</button>
+        </Link>
+
         <div className="doughnut-chart">
-          <DoughnutChart  chartData={userData}/>
+          <DoughnutChart chartData={userData}/>
         </div>
+      </section>
         
-        <LottieCheckComponent />
-        <LottieTrophyComponent />
-        <LottieXComponent />
-    </section>
+      <section>
+        <h2>Habit 2</h2>
+        <p>x days of 30 completed</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <Link to="/habits">
+          <button className="mainBtn">Habit 2</button>
+        </Link>
+
+        <div className="doughnut-chart">
+          <DoughnutChart chartData={userData}/>
+        </div>
+      </section>
+
+      <section>
+        <h2>Habit 3</h2>
+        <p>x days of 30 completed</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <Link to="/habits">
+          <button className="mainBtn">Habit 3</button>
+        </Link>
+
+        <div className="doughnut-chart">
+          <DoughnutChart chartData={userData}/>
+        </div>
+      </section>  
+    </article>
   )
 }

@@ -5,9 +5,9 @@ import { HabitContainer } from "../pages/HabitContainer";
 
 export const AppRoutes = () => (
   <Routes>
-    <Route path="/" element={<HabitIndex />} />
-    <Route path="/statistics" element={<StatisticsContainer />} />
-    <Route path="/habits" element={<HabitContainer />} />
-    <Route path="*" />
+      <Route path="/" element={<HabitIndex />} />
+      <Route path="/statistics" element={<StatisticsContainer />} />
+      <Route path="/habits" element={<HabitContainer />} />
+      <Route path="*" />
   </Routes>
 );

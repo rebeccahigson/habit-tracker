@@ -17,7 +17,7 @@ const LottieCalendarComponent = () => {
   const calendarOptions = {
     animationData: lottie_Calendar,
     style: {
-      height:200
+      height:150
     },
     loop: false, 
     autoplay:true

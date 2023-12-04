@@ -48,6 +48,9 @@ reducers: {
     // add habit completion status
     // if habit id =< 30 add new habit entry, else show completion page with restart button 
     // Push to array
+    dailyTrack: () => {
+
+    },
 
     reset: () => {
 
@@ -61,10 +64,11 @@ reducers: {
 
     // persist state between localhost sessions
 
+    
 }
 
 })
 
-//export const { addHabit, reset } = habitSlice.actions;
+export const { addHabit, reset, dailyTrack } = habitSlice.actions;
 export const habitList = (state) => state.habits.habits;
 export default habitSlice.reducer;

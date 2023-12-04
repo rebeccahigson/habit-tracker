@@ -20,6 +20,9 @@ color:#333;
 .col-green{
     background-color:#00E55C;
 }
+.col-lightGrey{
+    background-color:#D0D0D0;
+}
 
 
 /*-- Layout ---------------*/
@@ -39,6 +42,16 @@ button{
     color:#fff;
     background-color:#000;
 }
+.setHabitBtn{
+    background-color:red;
+}
+.mainBtn{
+    background-color:green;
+}
+.modalBtn{
+    padding:0px;
+}
+
 
 
 .doughnut-chart{
