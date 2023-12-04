@@ -71,4 +71,4 @@ export const StatisticsContainer = () => {
       </section>  
     </article>
   )
-}
+};
