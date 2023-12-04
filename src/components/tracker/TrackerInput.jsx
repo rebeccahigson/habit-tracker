@@ -1,4 +1,4 @@
-import "./Tracker.css"
+
 
 export const TrackerInput = () => {
   return (
