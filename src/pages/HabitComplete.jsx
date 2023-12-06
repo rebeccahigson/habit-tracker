@@ -10,12 +10,12 @@ export const HabitComplete = () => {
         <LottieTrophyComponent />
       </figure>
       
-      <h1>HabitIndex</h1>
+      <h1>Habit completed!</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
       <button 
-        className="mainBtn">
-          Start
+        className="addButton">
+          Start another habit
         </button>
     </article>
   )

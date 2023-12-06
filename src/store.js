@@ -1,12 +1,16 @@
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import { habitSlice } from "./reducers/habitSlice";
-import { modalSlice } from "./reducers/modalSlice";
+import { configureStore, combineReducers } from "@reduxjs/toolkit"
+import habitReducer from "./reducers/habitSlice";
+import modalReducer from "./reducers/modalSlice";
+import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER,} from 'redux-persist';
+
+
+
 
 const reducer = combineReducers({
-    habits: habitSlice,
-    modal: modalSlice,
-})
+  habits: habitReducer,
+  modal: modalReducer,
+});
 
 export const store = configureStore({
-    reducer: reducer
-})
+  reducer: reducer
+});

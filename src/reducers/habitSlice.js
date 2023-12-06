@@ -1,74 +1,32 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const habitData =[
-    {
-        id: 1,
-        name: 'Exercise',
-        progress: Array(30).fill(false), // 30 days tracking, initially set to false
-      },
-      {
-        id: 2,
-        name: 'Food',
-        progress: Array(30).fill(false),
-      },
-      {
-        id: 3,
-        name: 'Sleep',
-        progress: Array(30).fill(false),
-      },
-]
-
-const initialState = {
-    habits: [
-        {
-          id: 1,
-          name: 'Exercise',
-          progress: Array(30).fill(false), // 30 days tracking, initially set to false
-        },
-        {
-          id: 2,
-          name: 'Food',
-          progress: Array(30).fill(false),
-        },
-        {
-          id: 3,
-          name: 'Sleep',
-          progress: Array(30).fill(false),
-        },
-      ],
-};
-
-export const habitSlice = createSlice({
-name: "habits", 
-initialState,
-reducers: {
-    addHabit: () => {
-
-    },
-    // add habit completion status
-    // if habit id =< 30 add new habit entry, else show completion page with restart button 
-    // Push to array
-    dailyTrack: () => {
-
-    },
-
-    reset: () => {
-
-    },
-    // reset habit after 30 days
-    /* ??
-    restart: () => {
-      return initialState;
-    }
-    */
-
-    // persist state between localhost sessions
-
-    
+const habitData = {
+  items: [
+    { id: 1, completed: true },
+    { id: 2, completed: true },
+    { id: 3, completed: false },
+    { id: 4, completed: false },
+    { id: 5, completed: true },
+  ],
+  maxDailyEntries: 10,
+  habitCompleted: false,
 }
 
-})
 
-export const { addHabit, reset, dailyTrack } = habitSlice.actions;
-export const habitList = (state) => state.habits.habits;
+export const habitSlice = createSlice({
+  name: "habits",
+  initialState: habitData,
+  reducers: {
+    // Add habit entry
+    addEntry: (state, action) => {
+      state.items.push(action.payload);
+    },
+    // Reset habit array
+    reset: () => {},
+  
+  },
+});
+
+export const { addEntry, reset } = habitSlice.actions;
+export const habitsList = (state) => state.habits.items;
 export default habitSlice.reducer;

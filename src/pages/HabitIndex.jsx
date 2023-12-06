@@ -15,38 +15,33 @@ export const HabitIndex = () => {
         <LottieCalendarComponent />
       </figure>
       
-      <h1>HabitIndex</h1>
+      <h1>Track your habits</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
       <form>
         <input
         type="checkbox"
+        name="habit"
         onChange={() => {console.log("Chosen habit 1 to start")}}
         className="setHabitBtn" />
-        <label>
+        <label
+        for="habit">
           Habit 1
         </label> 
 
         <input
-        type="checkbox"
-        onChange={() => {console.log("Chosen habit 2 to start")}}
-        className="setHabitBtn" />
-        <label>
-          Habit 2
-        </label>  
-
-        <input
-        type="checkbox"
-        onChange={() => {console.log("Chosen habit 3 to start")}}
-        className="setHabitBtn" />
-        <label>
-          Habit 3
+        name="timeFrame"
+        type="text"
+        />
+        <label
+        for="timeFrame">
+          Time frame
         </label> 
 
         
         <Link to="/habits">
           <button 
-          className="mainBtn"
+          className="addButton"
           onClick={() => {console.log("Start habits")}}>
             Start
           </button>

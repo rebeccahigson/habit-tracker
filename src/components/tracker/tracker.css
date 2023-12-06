@@ -20,9 +20,13 @@ color:#333;
 .col-green{
     background-color:#00E55C;
 }
-.col-lightGrey{
-    background-color:#D0D0D0;
+.col-red{
+  background-color:#e74c3c;
 }
+.col-lightGrey{
+    background-color:#ecf0f1;
+}
+
 
 
 /*-- Layout ---------------*/
@@ -38,24 +42,24 @@ margin:50px 0;
 
 /*-- Buttons ---------------*/
 button{
-    padding:15px 25px;
-    color:#fff;
-    background-color:#000;
+padding:15px 25px;
+color:#fff;
+background-color:#000;
 }
 .setHabitBtn{
-    background-color:red;
+background-color:red;
 }
 .mainBtn{
-    background-color:green;
+background-color:green;
 }
 .modalBtn{
-    padding:0px;
+padding:0px;
 }
 
 
 
 .doughnut-chart{
-    width:400px;
+width:400px;
 }
 
 
@@ -70,6 +74,246 @@ height:55px;
 margin:2px;
 }
 figure{
-    float:left;
-    display:block;
+float:left;
+display:block;
 }
+.trackerItem{
+    width:60px;
+    height:40px;
+    min-height:15px;
+
+    margin:4px;
+    box-shadow: 1px 1px 3px #666;
+}
+
+
+
+
+/*--- Colors ---------------*/
+.completedTask{
+    background-color:#A9DBB8;
+  }
+  .toDoTask{
+    background-color:#AFC8D4;
+  }
+  
+
+
+
+
+
+  /*---------------------------------*/
+  /*--- Typography ---------------*/
+h1{
+  margin:0 0 20px 0;
+  font-size:34px;
+  line-height:40px;
+}
+p{
+  font-size:16px;
+  line-height:22px;
+}
+.subheading{
+  font-size:20px;
+}
+
+
+
+/*--- Colors ---------------*/
+.completedTask{
+  background-color:#A9DBB8;
+}
+.toDoTask{
+  background-color:#AFC8D4;
+}
+
+
+
+/*--- Layout ---------------*/
+.contentWrapper{
+  width:90%;
+  margin:0 auto;
+}
+.tasksWrapper{
+  display:flex;
+  margin:50px 0;
+}
+.toDoContainer{
+  width:70%;
+  padding:10px 20px 20px 20px;
+  background-color:#fff;
+}
+.completeContainer{
+  width:30%;
+  margin:10px 0px 0px 20px;
+  display:flex;
+  justify-content: center;
+}
+
+
+
+/*--- Nav ---------------*/  
+.mainNav{
+  width:100%;
+}
+
+
+
+/*--- Form ---------------*/
+form{
+  width:500px;
+  margin-top:50px;
+  display:flex;
+  flex-direction: column;
+}
+input{
+  border:none;
+}
+input[type=text]{
+  background-color:inherit;
+  border-bottom:1px solid #000;
+  width:100%;
+  font-size:18px;
+}
+input[type=checkbox]{
+  width:18px;
+  height:18px;
+}
+label{
+  margin-left:5px;
+  font-weight:normal;
+}
+
+
+
+/*--- Buttons ---------------*/
+button{
+  padding:10px 25px;
+  margin:10px;
+}
+.addButton{
+  margin:30px 0;
+  background-color:#38369A;
+  color:#fff;
+  font-size:16px;
+  border-radius:50px;
+  border:none;
+  padding:20px 30px;
+  width:250px;
+  font-weight:bold;
+}
+.addButton:hover{
+  background-color:#262669;
+}
+.removeButton{
+  padding:0px;
+  background-color:inherit;
+  border:none;
+  font-size:16px;
+  text-decoration:underline;
+  cursor:pointer;
+  opacity:0.5;
+}
+.removeButton:hover{
+  text-decoration:none;
+  opacity:1;
+}
+
+
+
+/*--- Tasks ---------------*/
+.taskList{
+  display:flex;
+  flex-wrap: wrap;
+  margin:10px 0 50px 0;
+  width:100%;
+  }
+
+.taskHeader{
+  margin:0 0 20px 0;
+  font-size:18px;
+}
+.removeButtonContainer{
+  position:absolute;
+  bottom:15px;
+  left:15px;
+}
+.completeContainer{
+  bottom:20px;
+  right:15px;
+}
+.checkContainer{
+  display:flex;
+  align-items:center;
+  position:absolute;
+  bottom:20px;
+  right:30px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .toDoContainer{
+    width:50%;
+    padding:10px 20px 20px 20px;
+  }
+  .completeContainer{
+    width:50%;
+    margin:10px 0px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .toDoContainer{
+    width:50%;
+    padding:10px 20px 20px 20px;
+  }
+  .completeContainer{
+    width:50%;
+    margin:10px 0px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .tasksWrapper{
+    flex-direction: column;
+  }
+  .toDoContainer{
+    width:100%;
+    padding:10px 20px 20px 20px;
+  }
+  .completeContainer{
+    width:100%;
+    margin:10px 0px 0px 10px;
+  }
+  .taskItem{
+    width:220px;
+    height:250px;
+    
+  }
+}
+@media screen and (max-width: 500px) {
+  form{
+    width:90%;
+  }
+}
+ 
+
+
+  
+
+  
+
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  

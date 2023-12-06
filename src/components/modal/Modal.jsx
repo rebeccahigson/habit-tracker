@@ -1,32 +1,15 @@
-import { useDispatch } from "react-redux";
-import { closeModal } from "../../reducers/modalSlice";
-import { dailyTrack } from "../../reducers/habitSlice";
-import "./Modal.css";
+
+import { useSelector } from "react-redux";
 
 export const Modal = () => {
-const dispatch = useDispatch();
+  const habitEntries = useSelector(habitsList);
+ 
 
   return (
-    <aside className="modalContainer">
-        <div className="modal">
-        <p>Input your progress:</p>
-
-        <button 
-        className="mainBtn"
-        onClick={() => {
-            dispatch(closeModal());
-        }}>
-            Green
-        </button>
-        
-        <button 
-        className="setHabitBtn"
-        onClick={() => {
-            dispatch(closeModal());
-        }}>
-            Red
-        </button>
-        </div>
-    </aside>
+    <section>
+      <h1>Oops....</h1>
+      <p>Looks like you already have an entry for today. Please try again tomorrow</p>
+    </section>
+    
   )
-}
+};
