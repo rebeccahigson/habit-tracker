@@ -23,6 +23,13 @@ export const StatisticsContainer = () => {
     ],
   });
 
+  //Not working
+  const chartOptions = {
+    legend: {
+      position: "right",
+    },
+  };
+
   useEffect(() => {
     // Number of completed days
     const completedDaysCount = habitEntries.filter((entry) => entry.completed).length;
@@ -41,9 +48,14 @@ export const StatisticsContainer = () => {
           backgroundColor: ["#0CE671", "rgb(255, 78, 78, 0.8)", "#ecf0f1"],
           borderColor: "#ddd",
           borderWidth: 1,
+          
         },
       ],
+      
     }));
+
+    
+
   }, [habitEntries, maxDailyEntries]);
 
   return (
@@ -56,13 +68,13 @@ export const StatisticsContainer = () => {
 
         <Link to="/habits">
           <button 
-          className="addButton">
+          className="mainBtn">
             Entry
           </button>
         </Link>
 
         <div className="doughnut-chart">
-          <DoughnutChart chartData={userData} />
+          <DoughnutChart chartData={userData} option={chartOptions} />
         </div>
       </section>
     </article>

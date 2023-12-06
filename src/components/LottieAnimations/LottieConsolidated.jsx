@@ -37,7 +37,7 @@ const LottieCheckComponent = () => {
   const checkOptions = {
     animationData: lottie_Check,
     style: {
-      height:300
+      height:150
     },
     loop: false, 
     autoplay:true
@@ -78,7 +78,7 @@ const LottieXComponent = () => {
   const xOptions = {
     animationData: lottie_X,
     style: {
-      height:260
+      height:150
     },
     loop: false, 
     autoplay:true

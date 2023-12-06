@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { addEntry } from "../../reducers/habitSlice";
 
-export const Form = () => {
+export const HabitEntryForm = () => {
   const dispatch = useDispatch();
   const [isComplete, setIsComplete] = useState(false);
   const [isNotComplete, setIsNotComplete] = useState(false);
@@ -45,7 +45,7 @@ export const Form = () => {
       </label>
 
       <button
-        className="addButton"
+        className="mainBtn"
         onClick={handleAddEntry}
         disabled={!isComplete && !isNotComplete}
       >

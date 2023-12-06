@@ -4,7 +4,7 @@ import { Modal } from "../modal/Modal";
 import { habitsList } from "../../reducers/habitSlice";
 import { TrackerItem } from "./TrackerItem";
 import { HabitComplete } from "../../pages/HabitComplete";
-import { Form } from "../form/Form";
+import { HabitEntryForm } from "../form/HabitEntryForm";
 
 
 export const TrackerContainer = () => {
@@ -29,18 +29,19 @@ export const TrackerContainer = () => {
         {status =="filled" ? <LottieCheckComponent /> : status ==="notFilled" ? <LottieXComponent /> : null}
       </figure>
 
-      <div className="tasksWrapper">
-        <article className="toDoContainer">
+      <div className="">
+        <article className="">
           <h1>Input</h1>
+          <div className="tracker">
           <div className="taskList">
             {habitEntries.map((entry) => (
               <TrackerItem key={entry.id} entry={entry} />
             ))}
           </div>
-
+          </div>
           <p>You have completed {totalEntriesCount} of {maxDailyEntries} days. </p>
 
-          <Form />
+          <HabitEntryForm />
         </article>
         </div>
         

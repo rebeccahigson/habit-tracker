@@ -1,6 +1,6 @@
 import './App.css'
 import './components/tracker/tracker.css';
-import { HabitIndex } from './pages/HabitIndex';
+import { HabitIndex } from './pages/Index';
 import { Nav } from './components/nav/Nav';
 
 export const App = () => {
@@ -9,7 +9,6 @@ export const App = () => {
     <main className='wrapper'>
       <div className='container'>
         <Nav />
-        
       </div>
     </main>
   )

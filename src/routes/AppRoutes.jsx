@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { HabitIndex } from "../pages/HabitIndex";
+import { HabitIndex } from "../pages/Index";
 import { StatisticsContainer } from "../pages/StatisticsContainer";
 import { TrackerContainer } from "../components/tracker/TrackerContainer";
 
