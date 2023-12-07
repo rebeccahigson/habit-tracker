@@ -1,15 +1,21 @@
 import './App.css'
 import './components/tracker/tracker.css';
-import { HabitIndex } from './pages/Index';
+import { BrowserRouter } from "react-router-dom";
+
+import { AppRoutes } from "./routes/AppRoutes";
 import { Nav } from './components/nav/Nav';
 
 export const App = () => {
 
   return (
-    <main className='wrapper'>
-      <div className='container'>
-        <Nav />
-      </div>
-    </main>
+    <BrowserRouter>
+      <main className='wrapper'>
+        <div className='container'>
+          <Nav /> 
+          <AppRoutes />
+        </div>
+      </main>
+    
+    </BrowserRouter>
   )
 };

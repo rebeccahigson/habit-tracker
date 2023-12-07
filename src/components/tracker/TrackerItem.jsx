@@ -1,7 +1,4 @@
 
-//import "./Tracker.css";
-
-
 export const TrackerItem = ({ entry }) => {
   
   return (

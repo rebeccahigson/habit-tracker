@@ -91,8 +91,26 @@ const LottieXComponent = () => {
     autoplay={xOptions.autoplay}
     />
   )
-
-  
 }
 
-export { LottieConsolidated, LottieCalendarComponent, LottieCheckComponent, LottieTrophyComponent, LottieXComponent };
+// Food
+const LottieFoodComponent = () => {
+  const foodOptions = {
+    animationData: lottie_Food,
+    style: {
+      height: 150
+    },
+    loop: false,
+    autoplay: true
+  }
+  return (
+    <Lottie 
+      animationData={foodOptions.animationData}
+      style={foodOptions.style}
+      loop={foodOptions.loop}
+      autoplay={foodOptions.autoplay}
+    />
+  )
+}
+
+export { LottieConsolidated, LottieCalendarComponent, LottieCheckComponent, LottieTrophyComponent, LottieXComponent, LottieFoodComponent };

@@ -1,9 +1,9 @@
 import { BrowserRouter, NavLink } from "react-router-dom";
-import { AppRoutes } from "../../routes/AppRoutes";
+
 import "./Nav.css";
 
 export const Nav = () => (
-  <BrowserRouter>
+
     <nav>
       <ul>
         <li>
@@ -18,6 +18,5 @@ export const Nav = () => (
         </li>
       </ul>
     </nav>
-    <AppRoutes />
-  </BrowserRouter>
+
 );

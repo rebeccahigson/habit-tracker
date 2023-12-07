@@ -1,19 +1,15 @@
 import { Link } from "react-router-dom";
-import { LottieCalendarComponent, LottieCheckComponent, LottieTrophyComponent, LottieXComponent } from "../components/LottieAnimations/LottieConsolidated";
+import { LottieCalendarComponent } from "../components/LottieAnimations/LottieConsolidated";
 import "../components/tracker/tracker.css";
-import { addDailyEntriesCount } from "../reducers/habitSlice";
-import { useDispatch } from "react-redux";
+
 import "../components/form/Form.css";
 
-export const HabitIndex = () => {
-  const dispatch = useDispatch();
+export const Index = () => {
 
-  const handleSetDailyEntriesCount = (action, payload) => {
-    dispatch(addDailyEntriesCount(action, payload));
-  };
-//Lottie animation
-//Buttons to select habit to track
-//Start button
+
+
+// Buttons to select habit to track
+// Start button
 // Useparams to render habit related to ID
 // add checked="" to input after logic is set up
 
@@ -28,7 +24,7 @@ export const HabitIndex = () => {
 
       <form>
 
-      <div className="cat action">
+      {/*<div className="cat action">
         <label>
           <input 
           type="checkbox" 
@@ -58,7 +54,7 @@ export const HabitIndex = () => {
         </label>
       </div>
       
-        {/* <input
+         <input
         type="checkbox"
         name="habit"
         onChange={() => {console.log("Chosen habit 1 to start")}}
@@ -69,14 +65,6 @@ export const HabitIndex = () => {
         </label> 
       */}
 
-        <label
-        for="timeFrame">
-          Time frame
-        </label> 
-        <input
-        name="timeFrame"
-        type="text"
-        />
         
 
         
@@ -85,7 +73,7 @@ export const HabitIndex = () => {
         <Link to="/habits">
           <button 
           className="mainBtn"
-          onClick={() => {console.log("Start habits")}}>
+          >
             Start
           </button>
         </Link>
