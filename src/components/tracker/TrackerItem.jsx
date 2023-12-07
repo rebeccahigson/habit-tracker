@@ -1,5 +1,5 @@
-import { LottieCheckComponent, LottieXComponent } from "../LottieAnimations/LottieConsolidated";
-import "./Tracker.css";
+
+//import "./Tracker.css";
 
 
 export const TrackerItem = ({ entry }) => {
