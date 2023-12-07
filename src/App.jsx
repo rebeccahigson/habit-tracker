@@ -10,10 +10,10 @@ export const App = () => {
   return (
     <BrowserRouter>
       <main className='wrapper'>
-        <div className='container'>
+        <section className='container'>
           <Nav /> 
           <AppRoutes />
-        </div>
+        </section>
       </main>
     
     </BrowserRouter>

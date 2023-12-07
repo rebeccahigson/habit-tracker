@@ -1,12 +1,13 @@
 import { useSelector, useDispatch } from "react-redux";
-import { LottieCheckComponent, LottieXComponent, LottieFoodComponent } from "../LottieAnimations/LottieConsolidated";
-import { habitsList, setHabitCompleted } from "../../reducers/habitSlice";
-import { TrackerItem } from "./TrackerItem";
-import { HabitComplete } from "../../pages/HabitComplete";
-import { HabitEntryForm } from "../form/HabitEntryForm";
+import { LottieCheckComponent, LottieXComponent, LottieFoodComponent } from "../components/LottieAnimations/LottieConsolidated";
+import { habitsList, setHabitCompleted } from "../reducers/habitSlice";
+import { TrackerItem } from "../components/tracker/TrackerItem";
+import { Complete } from "./Complete";
+import { HabitEntryForm } from "../components/form/HabitEntryForm";
+import "../components/tracker/Tracker.css"
 
 
-export const TrackerContainer = () => {
+export const Tracker = () => {
   const dispatch = useDispatch();
   const habitEntries = useSelector(habitsList);
   const maxDailyEntries = useSelector((state) => state.habits.maxDailyEntries);
@@ -14,12 +15,11 @@ export const TrackerContainer = () => {
 
   // Count of total tasks
   const totalEntriesCount = habitEntries.length;
-  console.log(`You have this many tasks in total ${totalEntriesCount}`);
 
   // Move to completed page after 30 days
   if (totalEntriesCount >= maxDailyEntries && !habitCompleted) {
     dispatch(setHabitCompleted(true))
-    return <HabitComplete />
+    return <Complete />
   }
 
  // Reformat current date to yy/mmYdd
@@ -28,35 +28,35 @@ export const TrackerContainer = () => {
  // Checking if there already is a daily habit entry
  const hasTodaysEntry = habitEntries.some(entry => entry.date === currentDate)
 
+
+
   // Test value to render Lottie, make dynamic
   // if habitEntries.items.completed === true
-  const status = "filled";
+  const status = "notFilled";
 
   return (
     <section className="contentWrapper">
       <figure>
         <LottieFoodComponent />
-        {/* {status =="filled" ? <LottieCheckComponent /> : status ==="notFilled" ? <LottieXComponent /> : null}*/}
+        {/*status =="filled" ? <LottieCheckComponent /> : status ==="notFilled" ? <LottieXComponent /> : null*/}
       </figure>
 
-      <div className="">
-        <article className="">
-          <h1>Input</h1>
-          <div className="tracker">
+      <article className="">
+        <h1>Input</h1>
+        <p>You are currently on day  {totalEntriesCount} of {maxDailyEntries}. Keep up the great work! </p>
+          
+        <section className="tracker">
           <div className="taskList">
             {habitEntries.map((entry) => (
               <TrackerItem key={entry.id} entry={entry} />
             ))}
           </div>
-          </div>
-          <p>You have completed {totalEntriesCount} of {maxDailyEntries} days. </p>
-
-          {/*// Only show form if there isn't already a daily entry 
-          {!hasTodaysEntry && <HabitEntryForm />}*/}
-          <HabitEntryForm />
-        </article>
-      </div>
+        </section>
         
+        {/*// Only show form if there isn't already a daily entry 
+          {!hasTodaysEntry && <HabitEntryForm />}*/}
+        <HabitEntryForm />
+      </article> 
     </section>
   )
 }

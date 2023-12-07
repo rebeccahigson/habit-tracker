@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { addEntry, habitsList } from "../../reducers/habitSlice";
+import "./Form.css";
 
 export const HabitEntryForm = () => {
   const dispatch = useDispatch();
@@ -28,7 +29,7 @@ export const HabitEntryForm = () => {
   return (
     <form>
       <div>
-        <label>
+        <label className="radioLabel">
           <input
             type="radio"
             checked={isComplete}
@@ -38,10 +39,8 @@ export const HabitEntryForm = () => {
           />
           Completed
         </label>
-      </div>
-
-      <div>
-        <label>
+      
+        <label className="radioLabel">
           <input
             type="radio"
             checked={isNotComplete}

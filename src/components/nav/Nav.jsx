@@ -1,5 +1,4 @@
-import { BrowserRouter, NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 export const Nav = () => (
@@ -10,8 +9,7 @@ export const Nav = () => (
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/habits">Habits</NavLink>
-          {/*useParams with Id ?? */}
+          <NavLink to="/habits">Healthy eating</NavLink>
         </li>
         <li>
           <NavLink to="/statistics">Statistics</NavLink>

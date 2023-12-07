@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 
 
 
-export const HabitComplete = () => {
+export const Complete = () => {
   const dispatch = useDispatch();
   const handleReset = () => {
     dispatch(reset());

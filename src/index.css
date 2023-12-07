@@ -42,22 +42,7 @@ main{
 
 
 
-button {
-  margin:30px 0;
-  color:#fff;
-  font-size:16px;
-  border-radius:50px;
-  border:none;
-  padding:20px 30px;
-  width:250px;
-  font-weight:bold;
-  cursor: pointer;
-  transition: border-color 0.25s;
-  display:block;
-}
-.mainBtn{
-  background-color:#38369A;
-}
+
 
 button:focus,
 button:focus-visible {

@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { DoughnutChart } from "../components/charts/DoughnutChart";
 import { Link } from "react-router-dom";
 
-export const StatisticsContainer = () => {
+export const Statistics = () => {
   const habitEntries = useSelector((state) => state.habits.items);
   const maxDailyEntries = useSelector((state) => state.habits.maxDailyEntries);
   
@@ -60,7 +60,13 @@ export const StatisticsContainer = () => {
 
   return (
     <article>
-      <section>
+      <section className="col-50">
+        <div className="doughnut-chart">
+          <DoughnutChart chartData={userData} option={chartOptions} />
+        </div>
+        </section>
+
+        <section className="col-50 statsSection">
         <h2>Habit 1</h2>
         <p>{completedDays} days completed, {failedDays} days failed, {maxDailyEntries - completedDays - failedDays} days remaining.</p>
         
@@ -72,10 +78,6 @@ export const StatisticsContainer = () => {
             Entry
           </button>
         </Link>
-
-        <div className="doughnut-chart">
-          <DoughnutChart chartData={userData} option={chartOptions} />
-        </div>
       </section>
     </article>
   );

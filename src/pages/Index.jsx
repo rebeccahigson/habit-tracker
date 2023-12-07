@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { LottieCalendarComponent } from "../components/LottieAnimations/LottieConsolidated";
 import "../components/tracker/tracker.css";
-
 import "../components/form/Form.css";
+
 
 export const Index = () => {
 
@@ -10,11 +10,11 @@ export const Index = () => {
 
 // Buttons to select habit to track
 // Start button
-// Useparams to render habit related to ID
-// add checked="" to input after logic is set up
+// UseParams to render habit related to ID
+
 
   return (
-    <article className="content">
+    <article className="">
       <figure>
         <LottieCalendarComponent />
       </figure>
@@ -22,9 +22,16 @@ export const Index = () => {
       <h1>Track your habits</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-      <form>
+      <Link to="/habits">
+          <button 
+          className="mainBtn"
+          >
+            Start
+          </button>
+        </Link>
 
-      {/*<div className="cat action">
+      {/*<form>
+      <div className="cat action">
         <label>
           <input 
           type="checkbox" 
@@ -63,23 +70,10 @@ export const Index = () => {
         for="habit">
           Habit 1
         </label> 
-      */}
-
-        
-
-        
-
-        
-        <Link to="/habits">
-          <button 
-          className="mainBtn"
-          >
-            Start
-          </button>
-        </Link>
-      </form>
-
       
+
+        
+      </form>*/}
     </article>
   )
 }
