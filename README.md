@@ -1,8 +1,24 @@
-# React + Vite
+# Habit tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A brief description of what this project does and who it's for
 
-Currently, two official plugins are available:
+The aim of this project is improving mental/physical health on a day to day basis in accordance with ont of the Agenda 2023 goals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The main focus is to motivate the user to ease into creating healthier daily habits such a exercise, healthy eating and sleep for a 30 day period. The user will be able add habits, mark them as completed/not completed and see statistics of progress.
+
+# Functionality
+
+- You can only add one tracker entry per day. If entry is already made the form section will be hidden and a message will be shown.
+
+## Installation
+
+Install my-project with npm
+
+```bash
+  npm install
+  cd my-project
+```
+
+## Tech Stack
+
+**Client:** React, Redux, Chart.js, Redux Persist, React Router

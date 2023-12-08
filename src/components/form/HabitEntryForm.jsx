@@ -19,7 +19,12 @@ export const HabitEntryForm = () => {
     
     // 
   if (completedValue !== undefined) {
-    dispatch(addEntry({ id: getNextIndex(), completed: completedValue, date: currentDate }));
+    dispatch(addEntry({ 
+      id: getNextIndex(), 
+      completed: completedValue, 
+      date: currentDate 
+    })
+    );
     setIsComplete(false);
     setIsNotComplete(false);
   }

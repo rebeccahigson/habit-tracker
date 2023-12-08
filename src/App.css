@@ -126,14 +126,14 @@ button {
 }
   
 .statsSummary{
-  background-color:#00E55C;
+  /*background-color:#00E55C;
   color:#fff;
   padding:0px 10px;
-  border-radius:5px;
+  border-radius:5px;*/
 }
 .statsSummary p{
   font-size:14px;
-  color:#fff;
+  line-height:20px;
   font-weight:bold;
 }
 .summary{

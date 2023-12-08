@@ -19,8 +19,8 @@ export const Index = () => {
         <LottieCalendarComponent />
       </figure>
       
-      <h1>Track your habits</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h1>Track your eating habits</h1>
+      <p>On average, it takes more than 2 months before a new behavior becomes automatic — 66 days to be exact. But lets take a first step and make it through <span className="bold">30 days of healthy eating</span>!</p>
 
       <Link to="/habits">
           <button 

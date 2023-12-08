@@ -11,7 +11,7 @@ export const App = () => {
     <BrowserRouter>
       <main className='wrapper'>
         <section className='container'>
-          <Nav /> 
+          
           <AppRoutes />
         </section>
       </main>

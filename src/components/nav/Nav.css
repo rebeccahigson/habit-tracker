@@ -19,6 +19,14 @@ nav {
     color: #38369A;
   }
   nav a:hover {
-    text-decoration: underline;
+    font-weight:bold;
     color:#1F1D55;
+  }
+  nav a.active{
+    font-weight:bold;
+  }
+
+  nav a.active:before{
+    content:"»";
+    margin-right:5px;
   }

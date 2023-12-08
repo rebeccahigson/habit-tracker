@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { DoughnutChart } from "../components/charts/DoughnutChart";
 import { Link } from "react-router-dom";
+import { Nav } from "../components/nav/Nav";
 
 export const Statistics = () => {
   const habitEntries = useSelector((state) => state.habits.items);
@@ -12,7 +13,7 @@ export const Statistics = () => {
   const [failedDays, setFailedDays] = useState(0);
 
   const [userData, setUserData] = useState({
-    labels: ["Completed", "Failed", "Remaining"],
+    labels: ["Healthy eating", "Snacked", "Days remaining"],
     datasets: [
       {
         data: [0, 0, maxDailyEntries],
@@ -59,6 +60,8 @@ export const Statistics = () => {
   }, [habitEntries, maxDailyEntries]);
 
   return (
+    <>
+    <Nav /> 
     <article>
       <section className="col-50">
         <div className="doughnut-chart">
@@ -69,7 +72,7 @@ export const Statistics = () => {
         <section className="col-50 statsSection">
         <h2>Healthy eating</h2>
         <div className="statsSummary">
-          <p >{completedDays} days completed, {failedDays} days failed, {maxDailyEntries - completedDays - failedDays} days remaining</p>
+          <p >{completedDays} days of healthy eating, {failedDays} days failed, {maxDailyEntries - completedDays - failedDays} days remaining.</p>
         </div>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -82,5 +85,6 @@ export const Statistics = () => {
         </Link>
       </section>
     </article>
+    </>
   );
 };

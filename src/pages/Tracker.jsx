@@ -4,6 +4,7 @@ import { habitsList, setHabitCompleted } from "../reducers/habitSlice";
 import { TrackerItem } from "../components/tracker/TrackerItem";
 import { Complete } from "./Complete";
 import { HabitEntryForm } from "../components/form/HabitEntryForm";
+import { Nav } from "../components/nav/Nav";
 
 
 
@@ -47,6 +48,8 @@ const showForm = () => {
   const status = "notFilled";
 
   return (
+    <>
+    <Nav /> 
     <section className="contentWrapper">
       <figure>
         <LottieFoodComponent />
@@ -68,5 +71,6 @@ const showForm = () => {
         {showForm()}
       </article> 
     </section>
+    </>
   )
 }
