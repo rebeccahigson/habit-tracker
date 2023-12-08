@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { LottieCalendarComponent } from "../components/LottieAnimations/LottieConsolidated";
-import "../components/tracker/tracker.css";
-import "../components/form/Form.css";
 
 
 export const Index = () => {

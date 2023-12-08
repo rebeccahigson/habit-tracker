@@ -1,5 +1,4 @@
 import { LottieTrophyComponent } from "../components/LottieAnimations/LottieConsolidated";
-import "../components/tracker/tracker.css";
 import { reset } from "../reducers/habitSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";

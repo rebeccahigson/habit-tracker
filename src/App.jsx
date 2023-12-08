@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import "./components/tracker/Tracker.css";
+import "./components/HabitTracker.css";
 import { AppRoutes } from "./routes/AppRoutes";
 
 export const App = () => {
