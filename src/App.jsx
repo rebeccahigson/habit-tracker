@@ -1,9 +1,6 @@
-import './App.css'
-import './components/tracker/tracker.css';
 import { BrowserRouter } from "react-router-dom";
-
+import "./components/tracker/Tracker.css";
 import { AppRoutes } from "./routes/AppRoutes";
-import { Nav } from './components/nav/Nav';
 
 export const App = () => {
 
@@ -11,7 +8,6 @@ export const App = () => {
     <BrowserRouter>
       <main className='wrapper'>
         <section className='container'>
-          
           <AppRoutes />
         </section>
       </main>

@@ -23,6 +23,23 @@ export const Tracker = () => {
     return <Complete />
   }
 
+ 
+
+
+  // Motivational count
+  const motivationMessage = () => {
+    switch (true) {
+      case totalEntriesCount === 0:
+        return <>Let's get started!</>;
+      case totalEntriesCount <= maxDailyEntries / 2:
+        return <>Keep at it!</>;
+      case totalEntriesCount > maxDailyEntries / 2:
+        return <>Sooooo close!</>;
+      default:
+        return null;
+    }
+  };
+
  // Reformat current date to yy/mmYdd
  const currentDate = new Date().toISOString().split("T")[0];
 
@@ -49,16 +66,17 @@ export const Tracker = () => {
 
   return (
     <>
-    <Nav /> 
-    <section className="contentWrapper">
+     <Nav /> 
+    <article>
       <figure>
         <LottieFoodComponent />
         {/*status =="filled" ? <LottieCheckComponent /> : status ==="notFilled" ? <LottieXComponent /> : null*/}
       </figure>
 
-      <article className="">
+      <section>
         <h1>Input daily entry</h1>
-        <p>You are currently on day  <b>{totalEntriesCount}</b> of <b>{maxDailyEntries}</b>. Keep up the great work! </p>
+        <p>You are currently on day <b>{totalEntriesCount}</b> of <b>{maxDailyEntries}.</b> {motivationMessage()} </p>
+        
           
         <section className="tracker">
           <div className="taskList">
@@ -70,8 +88,8 @@ export const Tracker = () => {
         
         {/*showForm()*/}
         <HabitEntryForm />
-      </article> 
-    </section>
+      </section> 
+    </article>
     </>
   )
 }

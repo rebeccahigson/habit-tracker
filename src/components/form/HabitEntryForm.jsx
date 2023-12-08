@@ -42,7 +42,7 @@ export const HabitEntryForm = () => {
               setIsComplete(!isComplete);
               setIsNotComplete(false);}}
           />
-          Ate healthy
+          I ate healthy!
         </label>
       
         <label className="radioLabel">
@@ -53,7 +53,7 @@ export const HabitEntryForm = () => {
               setIsNotComplete(!isNotComplete);
               setIsComplete(false);}}
               />
-          Snacked...
+           I snacked...
         </label>
       </div>
 

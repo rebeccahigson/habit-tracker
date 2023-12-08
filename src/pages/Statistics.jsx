@@ -70,14 +70,12 @@ export const Statistics = () => {
     <>
       <Nav />
       <article>
-        <section className="col-50">
-        <div className="doughnut-chart">
+        <section className="doughnut-chart">
           <DoughnutChart chartData={userData} options={chartOptions} />
-        </div>
         </section>
 
-        <section className="col-50 statsSection">
-          <h2>Healthy eating</h2>
+        <section className="statsSection">
+          <h1>Your progress</h1>
           <div className="statsSummary">
             <p>
               {completedDays} days of healthy eating, {failedDays} days failed and {maxDailyEntries - completedDays - failedDays} days remaining.

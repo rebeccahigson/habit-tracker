@@ -13,21 +13,21 @@ export const Complete = () => {
 
   return (
     <article>
-      <figure>
+      <figure className="extra-padding">
         <LottieTrophyComponent />
       </figure>
       
       <h1>Habit completed!</h1>
       <p>Great job, you completed the 30 days!</p>
 
-    <Link to="/">
-      <button 
+      <Link to="/">
+        <button 
         className="mainBtn"
         onClick={handleReset}
         aria-label="Start another habit">
-          Start another habit
+          Reset habit entries
         </button>
-        </Link>
+      </Link>
     </article>
   )
 };

@@ -7,7 +7,7 @@ import "../components/form/Form.css";
 export const Index = () => {
 
   return (
-    <article className="">
+    <article className="index">
       <figure>
         <LottieCalendarComponent />
       </figure>

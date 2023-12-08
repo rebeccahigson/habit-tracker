@@ -5,14 +5,14 @@ export const Nav = () => (
 
     <nav>
       <ul>
-         <li>
+          <li>
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="/habits">Healthy eating tracker</NavLink>
+          <NavLink to="/habits">Tracker</NavLink>
         </li>
         <li>
-          <NavLink to="/statistics">Statistics</NavLink>
+          <NavLink to="/statistics">Progress</NavLink>
         </li>
       </ul>
     </nav>
