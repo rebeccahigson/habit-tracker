@@ -5,15 +5,12 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 
 
-
 export const Complete = () => {
   const dispatch = useDispatch();
   const handleReset = () => {
     dispatch(reset());
   };
 
-  //Lottie animation
-  //Link to reset completed habit?
   return (
     <article>
       <figure>
@@ -21,15 +18,16 @@ export const Complete = () => {
       </figure>
       
       <h1>Habit completed!</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>Great job, you completed the 30 days!</p>
 
     <Link to="/">
       <button 
         className="mainBtn"
-        onClick={handleReset}>
+        onClick={handleReset}
+        aria-label="Start another habit">
           Start another habit
         </button>
         </Link>
     </article>
   )
-}
+};

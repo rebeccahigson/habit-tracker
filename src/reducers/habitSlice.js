@@ -22,6 +22,7 @@ export const habitSlice = createSlice({
     },
 
     
+
     // Set time frame of habit
     /*addDailyEntriesCount: (state, action) => {
       state.maxDailyEntries = action.payload;
@@ -39,5 +40,6 @@ export const habitSlice = createSlice({
 });
 
 export const { addEntry, reset, addDailyEntriesCount,setHabitCompleted } = habitSlice.actions;
+export const selectedHabitList = (state) => state.habits.selectedHabits; 
 export const habitsList = (state) => state.habits.items;
 export default habitSlice.reducer;

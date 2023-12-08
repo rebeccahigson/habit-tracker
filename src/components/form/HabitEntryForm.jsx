@@ -60,6 +60,7 @@ export const HabitEntryForm = () => {
       <button
         className="mainBtn"
         onClick={handleAddEntry}
+        aria-label="Add daily habit entry"
         
       >
         Add daily entry

@@ -30,7 +30,7 @@ export const Tracker = () => {
  const hasTodaysEntry = habitEntries.some(entry => entry.date === currentDate)
 
  // Only show form if there isn't already a daily entry 
-const showForm = () => {
+/*const showForm = () => {
   if (!hasTodaysEntry === true) {
     return <HabitEntryForm />
     
@@ -41,7 +41,7 @@ const showForm = () => {
         
     )
   }
-}
+}*/
 
   // Test value to render Lottie, make dynamic
   // if habitEntries.items.completed === true
@@ -68,7 +68,8 @@ const showForm = () => {
           </div>
         </section>
         
-        {showForm()}
+        {/*showForm()*/}
+        <HabitEntryForm />
       </article> 
     </section>
     </>

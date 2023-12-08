@@ -5,9 +5,9 @@ export const Nav = () => (
 
     <nav>
       <ul>
-        {/* <li>
+         <li>
           <NavLink to="/">Home</NavLink>
-        </li>*/}
+        </li>
         <li>
           <NavLink to="/habits">Healthy eating tracker</NavLink>
         </li>

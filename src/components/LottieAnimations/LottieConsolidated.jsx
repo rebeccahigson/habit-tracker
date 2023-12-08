@@ -57,7 +57,7 @@ const LottieTrophyComponent = () => {
   const trophyOptions = {
     animationData: lottie_Trophy,
     style: {
-      height:200
+      height:150
     },
     loop: false, 
     autoplay:true

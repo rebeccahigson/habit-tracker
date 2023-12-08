@@ -7,11 +7,9 @@ import { Nav } from "../components/nav/Nav";
 export const Statistics = () => {
   const habitEntries = useSelector((state) => state.habits.items);
   const maxDailyEntries = useSelector((state) => state.habits.maxDailyEntries);
-  
-
   const [completedDays, setCompletedDays] = useState(0);
   const [failedDays, setFailedDays] = useState(0);
-
+  const [maxStreak, setMaxStreak] = useState(0);
   const [userData, setUserData] = useState({
     labels: ["Healthy eating", "Snacked", "Days remaining"],
     datasets: [
@@ -24,19 +22,33 @@ export const Statistics = () => {
     ],
   });
 
-  //Not working
+  // Chart legend options
   const chartOptions = {
-    legend: {
-      position: "right",
+    plugins: {
+      legend: {
+        position: "bottom",
+        boxWidth: 20,
+      },
     },
   };
 
   useEffect(() => {
+    // Show streak of completed days
+    let streak = 0;
+
+    habitEntries.forEach((entry) => {
+      if (entry.completed) {
+        streak++;
+      } else {
+        setMaxStreak((prevMaxStreak) => Math.max(prevMaxStreak, streak));
+        streak = 0;
+      }
+    });
+
     // Number of completed days
     const completedDaysCount = habitEntries.filter((entry) => entry.completed).length;
     // Number of failed days
     const failedDaysCount = habitEntries.filter((entry) => !entry.completed).length;
-
     // Update completedDays and failedDays states
     setCompletedDays(completedDaysCount);
     setFailedDays(failedDaysCount);
@@ -46,45 +58,47 @@ export const Statistics = () => {
       datasets: [
         {
           data: [completedDaysCount, failedDaysCount, maxDailyEntries - completedDaysCount - failedDaysCount],
-          backgroundColor: ["#0CE671", "rgb(255, 78, 78, 0.8)", "#ecf0f1"],
+          backgroundColor: ["#0CE671", "#1F1D55", "#ecf0f1"],
           borderColor: "#ddd",
           borderWidth: 1,
-          
         },
       ],
-      
     }));
-
-    // if maxDailyEntries  30 days - if 
-
   }, [habitEntries, maxDailyEntries]);
 
   return (
     <>
-    <Nav /> 
-    <article>
-      <section className="col-50">
+      <Nav />
+      <article>
+        <section className="col-50">
         <div className="doughnut-chart">
-          <DoughnutChart chartData={userData} option={chartOptions} />
+          <DoughnutChart chartData={userData} options={chartOptions} />
         </div>
         </section>
 
         <section className="col-50 statsSection">
-        <h2>Healthy eating</h2>
-        <div className="statsSummary">
-          <p >{completedDays} days of healthy eating, {failedDays} days failed, {maxDailyEntries - completedDays - failedDays} days remaining.</p>
-        </div>
-        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h2>Healthy eating</h2>
+          <div className="statsSummary">
+            <p>
+              {completedDays} days of healthy eating, {failedDays} days failed and {maxDailyEntries - completedDays - failedDays} days remaining.
+            </p>
+          </div>
 
-        <Link to="/habits">
-          <button 
-          className="mainBtn">
-            Make an entry
-          </button>
-        </Link>
-      </section>
-    </article>
+          <p>Streak of successful days: <b>{maxStreak}</b></p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+
+          <Link to="/habits">
+            <button 
+            className="mainBtn"
+            aria-label="Add daily habit entry"
+            >Make an entry
+            </button>
+          </Link>
+        </section>
+      </article>
     </>
   );
 };
