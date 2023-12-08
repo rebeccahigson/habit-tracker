@@ -10,7 +10,6 @@ export const App = () => {
           <AppRoutes />
         </section>
       </main>
-    
     </BrowserRouter>
   )
 };

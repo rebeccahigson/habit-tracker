@@ -2,7 +2,6 @@ import { LottieTrophyComponent } from "../components/LottieAnimations/LottieCons
 import { reset } from "../reducers/habitSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import "../components/HabitTracker.css";
 
 
 export const Complete = () => {
@@ -17,17 +16,19 @@ export const Complete = () => {
         <LottieTrophyComponent />
       </figure>
       
-      <h1>Habit completed!</h1>
-      <p>Great job, you completed the 30 days!</p>
+      <section>
+        <h1>Habit completed!</h1>
+        <p>Great job, you completed the 30 days!</p>
 
-      <Link to="/">
-        <button 
-        className="mainBtn"
-        onClick={handleReset}
-        aria-label="Start another habit">
-          Reset habit entries
-        </button>
-      </Link>
+        <Link to="/">
+          <button 
+          className="mainBtn"
+          onClick={handleReset}
+          aria-label="Start another habit">
+            Reset habit entries
+          </button>
+        </Link>
+        </section>
     </article>
-  )
+  );
 };

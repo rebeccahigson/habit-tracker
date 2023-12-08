@@ -49,8 +49,8 @@ const LottieCheckComponent = () => {
     loop={checkOptions.loop}
     autoplay={checkOptions.autoplay}
     />
-  )
-}
+  );
+};
 
 //Trophy
 const LottieTrophyComponent = () => {
@@ -69,8 +69,8 @@ const LottieTrophyComponent = () => {
     loop={trophyOptions.loop}
     autoplay={trophyOptions.autoplay}
     />
-  )
-}
+  );
+};
 
 
 //X
@@ -90,8 +90,8 @@ const LottieXComponent = () => {
     loop={xOptions.loop}
     autoplay={xOptions.autoplay}
     />
-  )
-}
+  );
+};
 
 // Food
 const LottieFoodComponent = () => {
@@ -110,7 +110,7 @@ const LottieFoodComponent = () => {
       loop={foodOptions.loop}
       autoplay={foodOptions.autoplay}
     />
-  )
-}
+  );
+};
 
 export { LottieConsolidated, LottieCalendarComponent, LottieCheckComponent, LottieTrophyComponent, LottieXComponent, LottieFoodComponent };

@@ -20,16 +20,8 @@ export const habitSlice = createSlice({
     addEntry: (state, action) => {
       state.items.push(action.payload);
     },
-
-    
-
-    // Set time frame of habit
-    /*addDailyEntriesCount: (state, action) => {
-      state.maxDailyEntries = action.payload;
-    },*/
     // Set habitCompleted: true
     setHabitCompleted: () => {
-
     },
     // Reset habit array
     reset: (state) => {

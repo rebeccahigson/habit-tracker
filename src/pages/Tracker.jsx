@@ -5,9 +5,6 @@ import { TrackerItem } from "../components/tracker/TrackerItem";
 import { Complete } from "./Complete";
 import { HabitEntryForm } from "../components/form/HabitEntryForm";
 import { Nav } from "../components/nav/Nav";
-import "../components/HabitTracker.css";
-
-
 
 export const Tracker = () => {
   const dispatch = useDispatch();
@@ -23,9 +20,6 @@ export const Tracker = () => {
     dispatch(setHabitCompleted(true))
     return <Complete />
   }
-
- 
-
 
   // Motivational count
   const motivationMessage = () => {
@@ -51,12 +45,10 @@ export const Tracker = () => {
 const showForm = () => {
   if (!hasTodaysEntry === true) {
     return <HabitEntryForm />
-    
   } else {
     return (
       
-    <p className="summary">Looks like you are up to date on your entries</p>
-        
+    <p className="summary">Looks like you are up to date on your entries</p> 
     )
   }
 }
@@ -78,7 +70,6 @@ const showForm = () => {
         <h1>Input daily entry</h1>
         <p>You are currently on day <b>{totalEntriesCount}</b> of <b>{maxDailyEntries}.</b> {motivationMessage()} </p>
         
-          
         <section className="tracker">
           <div className="taskList">
             {habitEntries.map((entry) => (
@@ -91,5 +82,5 @@ const showForm = () => {
       </section> 
     </article>
     </>
-  )
-}
+  );
+};

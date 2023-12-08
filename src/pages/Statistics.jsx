@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { DoughnutChart } from "../components/charts/DoughnutChart";
 import { Link } from "react-router-dom";
 import { Nav } from "../components/nav/Nav";
-import "../components/HabitTracker.css";
 
 export const Statistics = () => {
   const habitEntries = useSelector((state) => state.habits.items);
@@ -36,7 +35,6 @@ export const Statistics = () => {
   useEffect(() => {
     // Show streak of completed days
     let streak = 0;
-
     habitEntries.forEach((entry) => {
       if (entry.completed) {
         streak++;

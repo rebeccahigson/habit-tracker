@@ -2,10 +2,9 @@ import { NavLink } from "react-router-dom";
 import "./Nav.css";
 
 export const Nav = () => (
-
     <nav>
       <ul>
-          <li>
+        <li>
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
@@ -16,5 +15,4 @@ export const Nav = () => (
         </li>
       </ul>
     </nav>
-
 );

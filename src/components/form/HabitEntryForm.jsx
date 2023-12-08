@@ -17,7 +17,6 @@ export const HabitEntryForm = () => {
   const currentDate = new Date().toISOString().split("T")[0];
   const completedValue = isComplete ? true : isNotComplete ? false : undefined;
     
-    // 
   if (completedValue !== undefined) {
     dispatch(addEntry({ 
       id: getNextIndex(), 
