@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { DoughnutChart } from "../components/charts/DoughnutChart";
 import { Link } from "react-router-dom";
 import { Nav } from "../components/nav/Nav";
-import ".HabitTracker.css";
+import "../components/HabitTracker.css";
 
 export const Statistics = () => {
   const habitEntries = useSelector((state) => state.habits.items);

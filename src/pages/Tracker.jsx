@@ -5,7 +5,7 @@ import { TrackerItem } from "../components/tracker/TrackerItem";
 import { Complete } from "./Complete";
 import { HabitEntryForm } from "../components/form/HabitEntryForm";
 import { Nav } from "../components/nav/Nav";
-import ".HabitTracker.css";
+import "../components/HabitTracker.css";
 
 
 
@@ -48,7 +48,7 @@ export const Tracker = () => {
  const hasTodaysEntry = habitEntries.some(entry => entry.date === currentDate)
 
  // Only show form if there isn't already a daily entry 
-/*const showForm = () => {
+const showForm = () => {
   if (!hasTodaysEntry === true) {
     return <HabitEntryForm />
     
@@ -59,7 +59,7 @@ export const Tracker = () => {
         
     )
   }
-}*/
+}
 
   // Test value to render Lottie, make dynamic
   // if habitEntries.items.completed === true
@@ -87,8 +87,7 @@ export const Tracker = () => {
           </div>
         </section>
         
-        {/*showForm()*/}
-        <HabitEntryForm />
+        {showForm()}
       </section> 
     </article>
     </>

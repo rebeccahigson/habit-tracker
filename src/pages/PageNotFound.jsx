@@ -1,4 +1,4 @@
-import ".HabitTracker.css";
+import "../components/HabitTracker.css";
 
 export const PageNotFound = () => {
   return (
