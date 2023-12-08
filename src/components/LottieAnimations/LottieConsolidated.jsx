@@ -98,7 +98,7 @@ const LottieFoodComponent = () => {
   const foodOptions = {
     animationData: lottie_Food,
     style: {
-      height: 150
+      height: 200
     },
     loop: false,
     autoplay: true

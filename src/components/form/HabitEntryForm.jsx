@@ -13,21 +13,21 @@ export const HabitEntryForm = () => {
   const handleAddEntry = () => {
   const getNextIndex = () => habitEntries.length + 1;
 
-    // Reformat current date to yy/mm/dd
-    const currentDate = new Date().toISOString().split("T")[0];
-
-    const completedValue = isComplete ? true : isNotComplete ? false : undefined;
+  // Reformat current date to yy/mm/dd
+  const currentDate = new Date().toISOString().split("T")[0];
+  const completedValue = isComplete ? true : isNotComplete ? false : undefined;
     
     // 
-    if (completedValue !== undefined) {
-      dispatch(addEntry({ id: getNextIndex(), completed: completedValue, date: currentDate }));
-      setIsComplete(false);
-      setIsNotComplete(false);
-    }
-  };
+  if (completedValue !== undefined) {
+    dispatch(addEntry({ id: getNextIndex(), completed: completedValue, date: currentDate }));
+    setIsComplete(false);
+    setIsNotComplete(false);
+  }
+};
 
   return (
     <form>
+      <p className="bold">How did you do today?</p>
       <div>
         <label className="radioLabel">
           <input
@@ -37,7 +37,7 @@ export const HabitEntryForm = () => {
               setIsComplete(!isComplete);
               setIsNotComplete(false);}}
           />
-          Completed
+          Ate healthy
         </label>
       
         <label className="radioLabel">
@@ -48,7 +48,7 @@ export const HabitEntryForm = () => {
               setIsNotComplete(!isNotComplete);
               setIsComplete(false);}}
               />
-          Not Completed
+          Snacked...
         </label>
       </div>
 
@@ -57,7 +57,7 @@ export const HabitEntryForm = () => {
         onClick={handleAddEntry}
         
       >
-        Add entry
+        Add daily entry
       </button>
     </form>
   );

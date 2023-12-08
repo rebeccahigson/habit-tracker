@@ -54,7 +54,7 @@ export const Statistics = () => {
       
     }));
 
-    
+    // if maxDailyEntries  30 days - if 
 
   }, [habitEntries, maxDailyEntries]);
 
@@ -67,15 +67,17 @@ export const Statistics = () => {
         </section>
 
         <section className="col-50 statsSection">
-        <h2>Habit 1</h2>
-        <p>{completedDays} days completed, {failedDays} days failed, {maxDailyEntries - completedDays - failedDays} days remaining.</p>
+        <h2>Healthy eating</h2>
+        <div className="statsSummary">
+          <p >{completedDays} days completed, {failedDays} days failed, {maxDailyEntries - completedDays - failedDays} days remaining</p>
+        </div>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
         <Link to="/habits">
           <button 
           className="mainBtn">
-            Entry
+            Make an entry
           </button>
         </Link>
       </section>

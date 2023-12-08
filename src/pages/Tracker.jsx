@@ -16,7 +16,7 @@ export const Tracker = () => {
   // Count of total tasks
   const totalEntriesCount = habitEntries.length;
 
-  // Move to completed page after 30 days
+  // Move to completed page after maxDailyEntries value
   if (totalEntriesCount >= maxDailyEntries && !habitCompleted) {
     dispatch(setHabitCompleted(true))
     return <Complete />
@@ -28,7 +28,19 @@ export const Tracker = () => {
  // Checking if there already is a daily habit entry
  const hasTodaysEntry = habitEntries.some(entry => entry.date === currentDate)
 
-
+ // Only show form if there isn't already a daily entry 
+const showForm = () => {
+  if (!hasTodaysEntry === true) {
+    return <HabitEntryForm />
+    
+  } else {
+    return (
+      
+    <p className="summary">Looks like you are up to date on your entries</p>
+        
+    )
+  }
+}
 
   // Test value to render Lottie, make dynamic
   // if habitEntries.items.completed === true
@@ -42,8 +54,8 @@ export const Tracker = () => {
       </figure>
 
       <article className="">
-        <h1>Input</h1>
-        <p>You are currently on day  {totalEntriesCount} of {maxDailyEntries}. Keep up the great work! </p>
+        <h1>Input daily entry</h1>
+        <p>You are currently on day  <b>{totalEntriesCount}</b> of <b>{maxDailyEntries}</b>. Keep up the great work! </p>
           
         <section className="tracker">
           <div className="taskList">
@@ -53,9 +65,7 @@ export const Tracker = () => {
           </div>
         </section>
         
-        {/*// Only show form if there isn't already a daily entry 
-          {!hasTodaysEntry && <HabitEntryForm />}*/}
-        <HabitEntryForm />
+        {showForm()}
       </article> 
     </section>
   )
