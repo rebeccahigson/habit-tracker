@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { LottieCalendarComponent } from "../components/LottieAnimations/LottieConsolidated";
-
+import ".HabitTracker.css";
 
 export const Index = () => {
 

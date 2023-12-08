@@ -1,5 +1,4 @@
 import { BrowserRouter } from "react-router-dom";
-import "./components/HabitTracker.css";
 import { AppRoutes } from "./routes/AppRoutes";
 
 export const App = () => {
