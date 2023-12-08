@@ -8,7 +8,7 @@ const habitData = {
     { id: 4, completed: false, date:"2023-12-04" },
     { id: 5, completed: true, date:"2023-12-05" },*/
   ],
-  maxDailyEntries: 10,
+  maxDailyEntries: 30,
   habitCompleted: false,
 }
 

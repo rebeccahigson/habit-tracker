@@ -81,7 +81,7 @@ export const Statistics = () => {
             </p>
           </div>
 
-          <p>Streak of successful days: <b>{maxStreak}</b></p>
+          <p>Streak of successful days: <b><div className="statsBubble col-green">{maxStreak}</div></b></p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
             tempor incididunt ut labore et dolore magna aliqua.

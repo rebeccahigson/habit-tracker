@@ -2,9 +2,7 @@
 nav {
     width: 100%;
     display: block;
-    min-height: 50px;
     font-size: 14px;
-    text-transform: uppercase;
     margin-bottom: 40px;
     font-weight:bold;
   }
@@ -37,4 +35,5 @@ nav {
     content: "»";
     margin-right: 5px;
   }
+
   

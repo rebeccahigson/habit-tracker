@@ -11,7 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#f5f5f5;
+  background-color:#f4f4f4;
 }
 
 main{
@@ -140,6 +140,20 @@ button {
   line-height:20px;
   font-weight:bold;
 }
+
+.statsBubble{
+  height:55px;
+  width:55px;
+  border-radius:50px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:#fff;
+}
+
+.largeFont{
+  font-size:18px;
+}
 .summary{
   background-color:#00E55C;
   color:#fff;
@@ -152,6 +166,13 @@ button {
 }
 .formMessage{
   margin-top:100px;
+  padding:25px 0;
+  border-top:1px solid #ddd;
+}
+.formMessage p{
+  font-size:16px;
+  line-height:20px;
+  margin:5px 0;
 }
 
 
@@ -159,7 +180,7 @@ button {
 .doughnut-chart{
   width:300px;
   margin:0 auto;
-  padding-bottom:25px;
+  padding:45px 0 25px 0;
 }
 
 

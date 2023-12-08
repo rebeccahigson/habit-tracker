@@ -47,15 +47,14 @@ const showForm = () => {
     return <HabitEntryForm />
   } else {
     return (
-      
-    <p className="summary">Looks like you are up to date on your entries</p> 
+    <aside className="formMessage">
+      <p className="bold">Looks like you are up to date on your entries</p> 
+      <p>Come back tomorrow</p>
+    </aside>
     )
   }
 }
 
-  // Test value to render Lottie, make dynamic
-  // if habitEntries.items.completed === true
-  const status = "notFilled";
 
   return (
     <>
@@ -63,7 +62,6 @@ const showForm = () => {
     <article>
       <figure>
         <LottieFoodComponent />
-        {/*status =="filled" ? <LottieCheckComponent /> : status ==="notFilled" ? <LottieXComponent /> : null*/}
       </figure>
 
       <section>
