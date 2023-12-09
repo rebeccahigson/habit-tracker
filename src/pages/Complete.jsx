@@ -2,6 +2,7 @@ import { LottieTrophyComponent } from "../components/LottieAnimations/LottieCons
 import { reset } from "../reducers/habitSlice";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import "./HabitTracker.css";
 
 
 export const Complete = () => {

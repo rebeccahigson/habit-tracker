@@ -5,6 +5,7 @@ import { TrackerItem } from "../components/tracker/TrackerItem";
 import { Complete } from "./Complete";
 import { HabitEntryForm } from "../components/form/HabitEntryForm";
 import { Nav } from "../components/nav/Nav";
+import "./HabitTracker.css";
 
 export const Tracker = () => {
   const dispatch = useDispatch();
