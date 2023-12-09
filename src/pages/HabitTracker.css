@@ -87,6 +87,8 @@ h1{
     float:left;
   }
     
+
+  /*-- Statistics ---------------*/
   .statsSummary p{
     font-size:14px;
     line-height:20px;
@@ -97,7 +99,6 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
   }
-  
   .statsBubble{
     height:55px;
     width:55px;
@@ -111,7 +112,11 @@ h1{
   .statsBubble p{
     color:#fff;
   }
-  
+  .doughnut-chart{
+    width:300px;
+    margin:0 auto;
+    padding:45px 0 25px 0;
+  }
   
   .summary{
     background-color:#00E55C;
@@ -136,18 +141,15 @@ h1{
   
   
   
-  /*--- Stats ---------------*/
-  .doughnut-chart{
-    width:300px;
-    margin:0 auto;
-    padding:45px 0 25px 0;
-  }
+
+  
 
 
 
   @media screen and (max-width: 500px) {
     .statsBubble{
-        height:35px;
-        width:35px;
+        height:45px;
+        width:45px;
+        margin-top:5px;
       }
   } 

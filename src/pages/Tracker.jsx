@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { LottieCheckComponent, LottieXComponent, LottieFoodComponent } from "../components/LottieAnimations/LottieConsolidated";
+import { LottieFoodComponent } from "../components/LottieAnimations/LottieConsolidated";
 import { habitsList, setHabitCompleted } from "../reducers/habitSlice";
 import { TrackerItem } from "../components/tracker/TrackerItem";
 import { Complete } from "./Complete";
