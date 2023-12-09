@@ -26,18 +26,10 @@ main{
 .container{
   width: 70%;
   max-width:800px;
-  /*border: 1px solid pink;*/
   padding: 20px;
   margin:50px 0;
   text-align:center;
 }
-
-
-
-
-
-
-
 
 
 
@@ -56,7 +48,6 @@ h3{
   font-size:22px;
   line-height:28px;
 }
-
 p{
   font-size:18px;
   line-height:24px;
@@ -64,6 +55,9 @@ p{
 }
 .bold{
   font-weight:bold;
+}
+.largeFont{
+  font-size:18px;
 }
 
 
@@ -74,11 +68,10 @@ p{
   background-color:#00E55C;
 }
 .col-red{
-  /*background-color:#FF4E4E;*/
   background-color:#1F1D55;
 }
 .col-lightGrey{
-    background-color:#ecf0f1;
+  background-color:#ecf0f1;
 }
   
 
@@ -112,29 +105,8 @@ button {
 }
 
 
-/*-- Tracker ---------------*/
-.tracker{
-  display:flex;
-  flex-wrap: wrap;
-  max-width:480px;
-  margin:0 auto;
-  padding:30px 0 0 0;
-}
-.trackerItem{
-  width:60px;
-  height:40px;
-  min-height:15px;
-  margin:4px;
-  box-shadow: 1px 1px 3px #666;
-  float:left;
-}
+
   
-/*.statsSummary{
-  background-color:#00E55C;
-  color:#fff;
-  padding:0px 10px;
-  border-radius:5px;
-}*/
 .statsSummary p{
   font-size:14px;
   line-height:20px;
@@ -160,9 +132,7 @@ button {
   color:#fff;
 }
 
-.largeFont{
-  font-size:18px;
-}
+
 .summary{
   background-color:#00E55C;
   color:#fff;
@@ -185,20 +155,13 @@ button {
 }
 
 
+
 /*--- Stats ---------------*/
 .doughnut-chart{
   width:300px;
   margin:0 auto;
   padding:45px 0 25px 0;
 }
-
-
-
-    
-    
-
-
-   
 
 
 @media screen and (max-width: 800px) {
@@ -209,6 +172,6 @@ button {
 
 @media screen and (max-width: 500px) {
   .container{
-    width:90%;
+    width:100%;
   }
 } 

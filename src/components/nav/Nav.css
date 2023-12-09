@@ -6,31 +6,25 @@ nav {
     margin-bottom: 40px;
     font-weight:bold;
   }
-  
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: right; 
   }
-  
   ul li {
     display: inline-block;
     margin: 0 15px 0 0; 
   }
-  
   nav a {
     color: #38369A;
     text-decoration: none; 
     transition: color 0.3s ease;
   }
-  
   nav a:hover {
     text-decoration:underline;
     color: #1F1D55;
   }
-  
-  
   nav a.active:before {
     content: "»";
     margin-right: 5px;
