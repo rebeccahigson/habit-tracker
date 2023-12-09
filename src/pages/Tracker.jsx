@@ -49,7 +49,7 @@ const showForm = () => {
     return (
     <aside className="formMessage">
       <p className="bold">Looks like you are up to date on your entries</p> 
-      <p>Come back tomorrow</p>
+      <p>Come back tomorrow!</p>
     </aside>
     )
   }

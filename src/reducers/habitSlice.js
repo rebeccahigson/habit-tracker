@@ -5,8 +5,7 @@ const habitData = {
     /*{ id: 1, completed: true, date:"2023-12-01" },
     { id: 2, completed: true, date:"2023-12-02" },
     { id: 3, completed: false, date:"2023-12-03" },
-    { id: 4, completed: false, date:"2023-12-04" },
-    { id: 5, completed: true, date:"2023-12-05" },*/
+  */
   ],
   maxDailyEntries: 30,
   habitCompleted: false,

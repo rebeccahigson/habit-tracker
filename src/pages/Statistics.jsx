@@ -75,17 +75,15 @@ export const Statistics = () => {
 
         <section className="statsSection">
           <h1>Your progress</h1>
-          <div className="statsSummary">
+          <div className="">
             <p>
-              {completedDays} days of healthy eating, {failedDays} days failed and {maxDailyEntries - completedDays - failedDays} days remaining.
+              <b>{completedDays}</b> days of healthy eating, <b>{failedDays}</b> days failed and <b>{maxDailyEntries - completedDays - failedDays}</b> days remaining.
             </p>
           </div>
 
-          <p>Streak of successful days: <b><div className="statsBubble col-green">{maxStreak}</div></b></p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          <div className="streakContainer">
+            <div><p>Streak of successful days:</p></div><div className="statsBubble col-green bold"><p>{maxStreak}</p></div>
+          </div>
 
           <Link to="/habits">
             <button 
