@@ -36,14 +36,18 @@ export const Statistics = () => {
   useEffect(() => {
     // Show streak of completed days
     let streak = 0;
+    let maxStreak = 0;  // Initialize maxStreak outside the loop
     habitEntries.forEach((entry) => {
       if (entry.completed) {
         streak++;
       } else {
-        setMaxStreak((prevMaxStreak) => Math.max(prevMaxStreak, streak));
+        maxStreak = Math.max(maxStreak, streak);
         streak = 0;
       }
     });
+  
+    
+    setMaxStreak(maxStreak);
 
     // Number of completed days
     const completedDaysCount = habitEntries.filter((entry) => entry.completed).length;
@@ -98,3 +102,4 @@ export const Statistics = () => {
     </>
   );
 };
+
