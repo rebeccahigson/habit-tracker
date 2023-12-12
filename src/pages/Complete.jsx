@@ -25,7 +25,7 @@ export const Complete = () => {
           <button 
           className="mainBtn"
           onClick={handleReset}
-          aria-label="Start another habit">
+          aria-label="Reset habit entries">
             Reset habit entries
           </button>
         </Link>

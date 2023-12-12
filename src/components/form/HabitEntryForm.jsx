@@ -43,7 +43,8 @@ export const HabitEntryForm = () => {
           />
           I ate healthy!
         </label>
-      
+  
+
         <label className="radioLabel">
           <input
             type="radio"
@@ -59,7 +60,7 @@ export const HabitEntryForm = () => {
       <button
         className="mainBtn"
         onClick={handleAddEntry}
-        aria-label="Add daily habit entry"
+        aria-label="Add daily entry"
         
       >
         Add daily entry

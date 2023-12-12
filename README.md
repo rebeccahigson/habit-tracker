@@ -33,7 +33,7 @@ Link to deployed site: https://magical-conkies-937d92.netlify.app/
 ## Features
 
 - Statistics summary with a doughnut chart from Chart.js
-- Summare of current streak of consecutive successful entries
+- Summary of current streak of consecutive successful entries
 - Cross check with latest entry date to ensure only one entry per day
 - Completion page triggered after habit period is over with an option to reset habit count
 

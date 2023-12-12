@@ -30,7 +30,7 @@ export const Tracker = () => {
       case totalEntriesCount <= maxDailyEntries / 2:
         return <>Keep at it!</>;
       case totalEntriesCount > maxDailyEntries / 2:
-        return <>Sooooo close!</>;
+        return <>Great job you got this!</>;
       default:
         return null;
     }
@@ -70,14 +70,17 @@ const showForm = () => {
         <p>You are currently on day <b>{totalEntriesCount}</b> of <b>{maxDailyEntries}.</b> {motivationMessage()} </p>
         
         <section className="tracker">
-          <div className="taskList">
+          <div className="trackerList">
             {habitEntries.map((entry) => (
               <TrackerItem key={entry.id} entry={entry} />
             ))}
           </div>
         </section>
         
-        {showForm()}
+        {/* Remove comment to only allow one entry per day 
+        showForm()*/}
+
+        <HabitEntryForm />
       </section> 
     </article>
     </>

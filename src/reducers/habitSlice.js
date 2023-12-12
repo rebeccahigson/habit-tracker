@@ -2,10 +2,15 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const habitData = {
   items: [
-    /*{ id: 1, completed: true, date:"2023-12-01" },
+    { id: 1, completed: true, date:"2023-12-01" },
     { id: 2, completed: true, date:"2023-12-02" },
     { id: 3, completed: false, date:"2023-12-03" },
-  */
+    { id: 4, completed: false, date:"2023-12-04" },
+    { id: 5, completed: false, date:"2023-12-05" },
+    { id: 6, completed: false, date:"2023-12-06" },
+    { id: 7, completed: false, date:"2023-12-07" },
+    { id: 8, completed: false, date:"2023-12-08" },
+
   ],
   maxDailyEntries: 30,
   habitCompleted: false,

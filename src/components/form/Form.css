@@ -2,6 +2,7 @@
 form{
   margin-top:100px;
 }
+
 input{
   border:none;
 }
@@ -14,8 +15,12 @@ input[type=text]{
 input[type=radio]{
   width:18px;
   height:18px;
+  margin-right:5px;
+  vertical-align: bottom;
 }
 .radioLabel{
   margin-left:20px;
   font-weight:normal;
 }
+
+

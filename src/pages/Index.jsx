@@ -17,7 +17,7 @@ export const Index = () => {
         <Link to="/habits">
           <button 
           className="mainBtn"
-          aria-label="Start tracking habit"
+          aria-label="Start tracking!"
           >
             Start tracking!
           </button>

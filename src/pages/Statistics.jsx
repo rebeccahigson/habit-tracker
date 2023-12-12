@@ -89,7 +89,7 @@ export const Statistics = () => {
           <Link to="/habits">
             <button 
             className="mainBtn"
-            aria-label="Add daily habit entry"
+            aria-label="Make an entry"
             >Make an entry
             </button>
           </Link>
